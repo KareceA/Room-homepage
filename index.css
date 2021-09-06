@@ -1,3 +1,39 @@
-.chairs-div {
+.grid-container {
+    display: grid;
+    position: absolute;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+    "room room room room side side"
+    "three three about about chair chair";
+
+}
+
+.top-left-image {
     position: relative;
+}
+
+.nav-bar {
+    position: absolute;
+}
+.chairs-div {
+    grid-area: room;
+    display: flex;
+    justify-self: start;
+}
+
+.top-right-div {
+    grid-area: side;
+}
+
+.bottom-left-image {
+    grid-area: three;
+}
+
+.about-div {
+    grid-area: about;
+}
+
+.bottom-right-image {
+    grid-area: chair;
 }
