@@ -1,39 +1,86 @@
 .grid-container {
     display: grid;
-    position: absolute;
-    grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: 1fr 1fr;
+    position: relative;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: 400px auto;
     grid-template-areas:
-    "room room room room side side"
-    "three three about about chair chair";
+    "room room room room side side side"
+    "three three about about about chair chair";
 
 }
+body {
+    margin: 0;
+    font-family: "Spartan", sans-serif;
+}
 
+ul {
+    list-style: none;
+    display: inline-flex;
+    margin: 20px;
+}
+
+li {
+    margin-right: 15px;
+    color: white;
+}
 .top-left-image {
     position: relative;
 }
 
 .nav-bar {
     position: absolute;
+    padding: 20px;
+}
+
+.room-logo {
+    margin-left: 30px;
 }
 .chairs-div {
     grid-area: room;
-    display: flex;
-    justify-self: start;
+    background-image: url("./images/desktop-image-hero-2.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 400px;
+    background-size: cover;
+    position: unset;
 }
 
 .top-right-div {
     grid-area: side;
+    margin: 30px;
 }
 
+.p-text {
+    color: #b1adad;
+}
+
+.icon-angle {
+    background-color: black;
+    padding: 15px;
+    width: 50px;
+    position: absolute;
+    top: 340px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.left-arrow {
+    padding-right: 10px;
+}
 .bottom-left-image {
     grid-area: three;
+    background-image: url(./images/image-about-dark.jpg);
 }
 
 .about-div {
     grid-area: about;
+    margin: 30px;
+}
+.p-tag {
+    color: #b1adad;
 }
 
 .bottom-right-image {
     grid-area: chair;
+    background-image: url(./images/image-about-light.jpg);
 }
